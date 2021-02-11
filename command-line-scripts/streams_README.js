@@ -23,7 +23,7 @@ function printHelp() {
 
 // README
 
-// Meanwhile in the console, I'm using the command node ex1.js 2>hello.txt to change the standard error stream output to the hello.txt file.
+// Meanwhile in the console which can be a ZSH, terminal or TTY or any other command line interfaces, I'm using the command node ex1.js 2>hello.txt to change the standard error stream output to the hello.txt file.
 // to append to this file, we can use >> instead.
 
 // > is the redirect symbol that can be used to redirect a specific stream. So, if I say 1>, it will redirect the standard output stream.
