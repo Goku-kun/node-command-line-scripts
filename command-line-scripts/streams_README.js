@@ -1,4 +1,7 @@
-printHelp();
+if (process.argv[2] == "--help" || process.argv[2] == "-h") {
+    printHelp();
+}
+
 console.error('This is an error which will be dumped to the /dev/null  if redirected using 2>/dev/null');
 process.stdout.write('Hello World!' + ' This is nice');
 process.stdout.write('Another character stream to standard output stream\n');
@@ -7,12 +10,14 @@ process.stdout.write('Another character stream to standard output stream\n');
 /* ****************************** */
 
 function printHelp() {
+    console.log("-------HELP-------")
     console.log('streams_README.js usage:');
     console.log("");
     console.log("node streams_README.js 1>{FILENAME, /dev/null} 2>{FILENAME, &1, /dev/null} ");
     console.log("");
     console.log("1>{FILENAME, /dev/null}                   redirects the stdout stream to FILENAME or /dev/null")
     console.log("2>{FILENAME, &1, /dev/null}               redirects the stderror stream to FILENAME or wherever stdout is redirected or /dev/null")
+    console.log("------------------")
 }
 
 // README
